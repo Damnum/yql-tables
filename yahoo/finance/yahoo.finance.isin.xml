@@ -117,6 +117,20 @@
     stock.Isin = results.a.text().toString().trim();
     }
     
+               if (stock.Isin == ""){
+        var isinQuery = y.query(
+	"select * from html " +
+	"where url=@url and " +
+	"xpath='" +
+	"//table[@summary = \"YFT_SL_TABLE_SUMMARY\"]/tbody/tr[./td[position() = 6 and contains(.,\"BER\")]]/td[1]/a'" ,
+	{url:url});
+
+    var stock = <stock symbol={symbol}></stock>;
+    
+    var results = isinQuery.results;
+    stock.Isin = results.a.text().toString().trim();
+    }
+    
     response.object = stock
 
 ]]></execute>
