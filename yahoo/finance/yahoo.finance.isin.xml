@@ -64,7 +64,7 @@
 	"select * from html " +
 	"where url=@url and " +
 	"xpath='" +
-	"//table[@summary = \"YFT_SL_TABLE_SUMMARY\"]/tbody/tr[position() = 6 and ./td[contains(.,\"FRA\")]]/td[1]/a'" ,
+	"//table[@summary = \"YFT_SL_TABLE_SUMMARY\"]/tbody/tr[./td[contains(.,\"FRA\")]]/td[1]/a'" ,
 	{url:url});
     
     var stock = <stock symbol={symbol}></stock>;
