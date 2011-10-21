@@ -78,7 +78,7 @@
 	"select * from html " +
 	"where url=@url and " +
 	"xpath='" +
-	"//table[@summary = \"YFT_SL_TABLE_SUMMARY\"]/tbody/tr[./td[position() = 6 and contains(.,\"ENX\")]]/td[1]/a'" ,
+	"//table[@summary = \"YFT_SL_TABLE_SUMMARY\"]/tbody/tr[./td[contains(.,\"ENX\")]]/td[1]/a'" ,
 	{url:url});
 
     var stock = <stock symbol={symbol}></stock>;
