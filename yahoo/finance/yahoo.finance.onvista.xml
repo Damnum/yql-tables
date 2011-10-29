@@ -147,7 +147,7 @@ var url = "http://www.onvista.de/analysen/analyzer/isin/"+symbol;
 	"select * from html " +
 	"where url=@url and " +
 	"xpath='" +
-	"//table/tr[./td[contains(.,\"Branche:\")]]/td[7]'" ,
+	"//table/tr[./td[contains(.,\"Branche:\")]]'" ,
 	{url:url});
 
     var stock = <stock symbol={symbol}></stock>;
