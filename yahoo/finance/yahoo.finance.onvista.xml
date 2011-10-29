@@ -44,6 +44,14 @@
 	"xpath='" +
 	"//table[@class = \"weiss abst\"]/tr[./td[contains(.,\"Eigenkapitalquote \")]]/td[2]'" ,
 	{url:url});
+	
+    var url = "http://www.onvista.de/aktien/kennzahlen/fundamental.html?ISIN="+symbol;
+    var ebitQuery = y.query(
+	"select * from html " +
+	"where url=@url and " +
+	"xpath='" +
+	"//table[@class = \"weiss abst\"]/tr[./td[contains(.,\"Eigenkapitalrendite\")]]/td[2]'" ,
+	{url:url});
 
     var url = "http://www.onvista.de/aktien/kennzahlen/fundamental.html?ISIN="+symbol;
     var per1Query = y.query(
@@ -125,6 +133,9 @@ var url = "http://www.onvista.de/analysen/analyzer/isin/"+symbol;
     
     var results = eqratioQuery.results;
     stock.EquityRatio = results.td.p.toString().trim();
+    
+    var results = rOEQuery.results;
+    stock.ROE = results.td.p.toString().trim();
     
     var results = per1Query.results;
     stock.PER1 = results.td.p.toString().trim();
