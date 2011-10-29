@@ -46,7 +46,7 @@
 	{url:url});
 	
     var url = "http://www.onvista.de/aktien/kennzahlen/fundamental.html?ISIN="+symbol;
-    var ebitQuery = y.query(
+    var rOEQuery = y.query(
 	"select * from html " +
 	"where url=@url and " +
 	"xpath='" +
