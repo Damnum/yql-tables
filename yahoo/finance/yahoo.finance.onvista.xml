@@ -142,12 +142,12 @@ var url = "http://www.onvista.de/analysen/analyzer/isin/"+symbol;
 	"//tbody/tr[./td[contains(.,\"Herabstufungen\")]]/td[@class = \"KENNZAHL\"]'" ,
 	{url:url});	
 
-    var url = "http://www.onvista.de/analysen/analyzer/isin/"+symbol;
+    var url = "http://www.onvista.de/aktien/kennzahlen/fundamental.html?ISIN="+symbol;
     var branchQuery = y.query(
 	"select * from html " +
 	"where url=@url and " +
 	"xpath='" +
-	"//tr'" ,
+	"//table/tr[./td[contains(.,\"Branche:\")]]/td[5]'" ,
 	{url:url});
 
     var stock = <stock symbol={symbol}></stock>;
