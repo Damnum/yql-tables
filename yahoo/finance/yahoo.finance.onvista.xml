@@ -54,6 +54,22 @@
 	{url:url});
 
     var url = "http://www.onvista.de/aktien/kennzahlen/fundamental.html?ISIN="+symbol;
+    var epsAJQuery = y.query(
+	"select * from html " +
+	"where url=@url and " +
+	"xpath='" +
+	"//table[@class = \"weiss abst\"]/tr[./td[contains(.,\"Gewinn pro Aktie\")]]/td[3]'" ,
+	{url:url});
+	
+    var url = "http://www.onvista.de/aktien/kennzahlen/fundamental.html?ISIN="+symbol;
+    var epsNJQuery = y.query(
+	"select * from html " +
+	"where url=@url and " +
+	"xpath='" +
+	"//table[@class = \"weiss abst\"]/tr[./td[contains(.,\"Gewinn pro Aktie\")]]/td[2]'" ,
+	{url:url});
+
+    var url = "http://www.onvista.de/aktien/kennzahlen/fundamental.html?ISIN="+symbol;
     var per1Query = y.query(
 	"select * from html " +
 	"where url=@url and " +
@@ -136,6 +152,12 @@ var url = "http://www.onvista.de/analysen/analyzer/isin/"+symbol;
     
     var results = rOEQuery.results;
     stock.ROE = results.td.p.toString().trim();
+    
+    var results = epsNJQuery.results;
+    stock.EPSNJ = results.td.p.toString().trim();
+    
+    var results = epsAJQuery.results;
+    stock.EPSAJ = results.td.p.toString().trim();
     
     var results = per1Query.results;
     stock.PER1 = results.td.p.toString().trim();
