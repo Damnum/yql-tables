@@ -195,7 +195,7 @@ var url = "http://www.onvista.de/analysen/analyzer/isin/"+symbol;
     stock.Downgrade = results.td.p.toString().trim();
     
     var results = branchQuery.results;
-    stock.Branch = results;
+    stock.Branch = results.td.toString();
     
     response.object = stock
 
