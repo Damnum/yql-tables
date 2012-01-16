@@ -150,7 +150,7 @@
     var stock = <stock symbol={symbol}></stock>;
     
     var results = lastMonthQuery.results;
-    stock.LastMonth = results.td.p.toString().trim();
+    stock.LastMonth = results.td.p.p.toString().trim();
     
     var results = twoMonthsAgoQuery.results;
     stock.TwoMonthsAgo = results.td.p.toString().trim();
