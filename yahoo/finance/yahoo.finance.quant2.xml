@@ -38,7 +38,7 @@
        year += 1900;
     
     if (month == 0){
-    	var lastMonth = 12;
+    	var lastMonth = 11;
     	var lastYear = year-1;
     }
     else {
