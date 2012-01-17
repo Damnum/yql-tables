@@ -66,12 +66,10 @@
  
  
     if (lastMonth == 0){
-    	var twoMonthsAgo = 12;
-    	var lastYear = year-1;
+    	var twoMonthsAgo = 11;
     }
     else {
     	var twoMonthsAgo = lastMonth - 1;
-    	var lastYear = year;
     }
     
     if (twoMonthsAgo == 0 || twoMonthsAgo == 2 || twoMonthsAgo == 4 || twoMonthsAgo == 6 || twoMonthsAgo == 7 || twoMonthsAgo == 9 || twoMonthsAgo == 11){
@@ -93,12 +91,10 @@
 	{url:url});
 
     if (twoMonthsAgo == 0){
-    	var threeMonthsAgo = 12;
-    	var lastYear = year-1;
+    	var threeMonthsAgo = 11;
     }
     else {
     	var threeMonthsAgo = twoMonthsAgo - 1;
-    	var lastYear = year;
     }
     
     if (threeMonthsAgo == 0 || threeMonthsAgo == 2 || threeMonthsAgo == 4 || threeMonthsAgo == 6 || threeMonthsAgo == 7 || threeMonthsAgo == 9 || threeMonthsAgo == 11){
@@ -121,12 +117,10 @@
 	{url:url});    
 
     if (threeMonthsAgo == 0){
-    	var fourMonthsAgo = 12;
-    	var lastYear = year-1;
+    	var fourMonthsAgo = 11;
     }
     else {
     	var fourMonthsAgo = threeMonthsAgo - 1;
-    	var lastYear = year;
     }
     
     if (fourMonthsAgo == 0 || fourMonthsAgo == 2 || fourMonthsAgo == 4 || fourMonthsAgo == 6 || fourMonthsAgo == 7 || fourMonthsAgo == 9 || fourMonthsAgo == 11){
