@@ -177,7 +177,7 @@
        year += 1900;
     
     if (month == 0){
-    	var lastMonth = 12;
+    	var lastMonth = 11;
     	var lastYear = year-1;
     }
     else {
@@ -205,7 +205,7 @@
  
  
     if (lastMonth == 0){
-    	var twoMonthsAgo = 12;
+    	var twoMonthsAgo = 11;
     	var lastYear = year-1;
     }
     else {
@@ -232,7 +232,7 @@
 	{url:url});
 
     if (twoMonthsAgo == 0){
-    	var threeMonthsAgo = 12;
+    	var threeMonthsAgo = 11;
     	var lastYear = year-1;
     }
     else {
@@ -260,7 +260,7 @@
 	{url:url});    
 
     if (threeMonthsAgo == 0){
-    	var fourMonthsAgo = 12;
+    	var fourMonthsAgo = 11;
     	var lastYear = year-1;
     }
     else {
