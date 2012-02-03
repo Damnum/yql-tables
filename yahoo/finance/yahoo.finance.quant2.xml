@@ -67,6 +67,7 @@
  
     if (lastMonth == 0){
     	var twoMonthsAgo = 11;
+    	var lastYear = year-1;
     }
     else {
     	var twoMonthsAgo = lastMonth - 1;
@@ -92,6 +93,7 @@
 
     if (twoMonthsAgo == 0){
     	var threeMonthsAgo = 11;
+    	var lastYear = year-1;
     }
     else {
     	var threeMonthsAgo = twoMonthsAgo - 1;
@@ -118,6 +120,7 @@
 
     if (threeMonthsAgo == 0){
     	var fourMonthsAgo = 11;
+    	var lastYear = year-1;
     }
     else {
     	var fourMonthsAgo = threeMonthsAgo - 1;
